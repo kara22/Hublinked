@@ -18,10 +18,6 @@ const setCookie = async () => {
     });
 };
 
-// innerHTML function
-const innerHtml = (selector, message) =>
-    (document.querySelector(selector).innerHTML = message);
-
 const createElement = (childElement, parentElementId, content, value = "") => {
     const newChildElement = document.createElement(childElement);
     const parentElement = document.getElementById(parentElementId);
