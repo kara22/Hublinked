@@ -1,0 +1,41 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 500px;
+    padding: 20px !important;
+    height: auto;
+}
+
+form {
+    width: 300px;
+}
+
+#send-data {
+    background: RGB(245, 118, 47);
+    padding: 10px;
+    font-size: 1em;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    outline: none !important;
+}
+
+#loader {
+    display: none;
+}
+
+.highlighted {
+    padding: 2px 15px 4px;
+    font-style: normal;
+    border-radius: 3px;
+}
+
+.highlighted-orange {
+    color: RGB(253, 123, 94);
+    background: rgba(253, 123, 94, 0.1);
+}

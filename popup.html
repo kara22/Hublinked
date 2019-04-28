@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        />
+    
+    </head>
+    <body>
+
+        <h1 class="ui center aligned header "><span class="highlighted-orange">HubLinked</span></h1>
+
+        <div class="ui container center aligned segment">
+                <button id="fetch-data" class="ui blue button">Fetch Linkedin data</button>
+                <button id="add-to-hubspot" class="ui orange button" disabled="disabled">Add to Hubspot</button>
+                <div class="ui active centered inline loader" id="loader"></div>
+        </div>
+
+        <div class="ui left aligned container" id="logs">
+                <p id="step4"></p>
+        </div>
+
+        <div class="form-wrapper">
+
+            <form class="ui form">
+                <div class="field">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" value="" placeholder="Simon"/>
+                </div>
+                <div class="field">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" value="" placeholder="Delpi"/>
+                </div>
+                <div class="field">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" id="company" value="" placeholder="comet"/>
+                </div>
+                <div class="field">
+                    <label for="location">Contact email</label>
+                    <input type="text" name="email" id="email" value="" placeholder="simon@delpi.com" />
+                </div>
+
+                <select id="hubspot-owner">
+                        <option value="">Please select your name</option>
+                        
+                        <!-- <option value="26026715">Alixia</option>
+                        <option value="31411287">Noémie</option>
+                        <option value="34555207">Mounder</option>
+                        <option value="31896293">Martin</option>
+                        <option value="33667317">Sandy</option>
+                        <option value="33666560">Stan</option>
+                        <option value="31962422">Emilie</option>
+                        <option value="33932306">Robin</option>
+                        <option value="35178710">Nina</option>
+                        <option value="35178504">Ryan</option>
+                        <option value="35848939">Maureen</option>
+                        <option value="31502654">Sasha</option>
+                        <option value="33638635">Cedrico</option>
+                        <option value="25597688">Yoann</option>
+                        <option value="34972070">Eric</option> -->
+                        
+                        
+                    </select>
+
+                <div class="field">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="location" value="" placeholder="Paris"/>
+                </div>
+                <div class="field">
+                    <label for="job_title">Job title</label>
+                    <input type="text" name="job_title" id="job_title" value="" placeholder="Chief digital officer" />
+                </div>
+                <div class="field">
+                        <label for="level">Level</label>
+                        <input type="text" name="level" id="level" value="" placeholder="1"/>
+                </div>
+            </div>
+                <input
+                    type="hidden"
+                    name="linkedin_url"
+                    id="linkedin_url"
+                    value=""
+                />
+            </form>
+
+            
+       
+       
+    </body>
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="functions-scripts/keys.js"></script>
+    <script type="text/javascript" src="functions-scripts/event-listeners.js"></script>
+    <script type="text/javascript" src="functions-scripts/fetch-linkedin-data.js"></script>
+    <script type="text/javascript" src="functions-scripts/add-to-hubspot.js"></script>
+    <script type="text/javascript" src="functions-scripts/create-contact.js"></script>
+    <script type="text/javascript" src="functions-scripts/check-notes.js"></script>
+    <script type="text/javascript" src="functions-scripts/add-hubspot-note.js"></script>
+</html>

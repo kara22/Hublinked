@@ -1,0 +1,26 @@
+{
+    "name": "HubLinked",
+    "version": "1.2.8",
+    "description": "Create Hubspot contacts from Linkedin and scrape your conversation",
+    "manifest_version": 2,
+    "icons": { "128": "0.png" },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "background",
+        "cookies",
+        "notifications",
+        "https://www.linkedin.com/*",
+        "https://linkedin.com/*",
+        "https://api.hubapi.com/*",
+        "https://api.dropcontact.io/*"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}
