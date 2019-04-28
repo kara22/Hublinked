@@ -6,12 +6,10 @@ const checkNotes = (contactId, values) => {
         .then(response => response.json())
         .then(data => {
             const array = [];
-            console.log(data);
             data.results.forEach(result => {
                 if (result.engagement.type === "NOTE") {
                     if (!array.includes(result.metadata.body)) {
                         array.push(result.metadata.body);
-                        console.log(result.metadata.body);
                     }
                 }
             });

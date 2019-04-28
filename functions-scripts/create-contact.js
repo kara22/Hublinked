@@ -59,7 +59,6 @@ const createContact = async values => {
         // If success, log confirmation
         .then(response => response.json())
         .then(JsonResponse => {
-            console.log(JsonResponse);
             if (
                 JsonResponse.error &&
                 JsonResponse.message === "Contact already exists"
