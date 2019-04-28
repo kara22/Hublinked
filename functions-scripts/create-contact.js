@@ -2,7 +2,7 @@
 const createContact = async values => {
     const hubspotCreateContactUrl = `https://api.hubapi.com/contacts/v1/contact/?hapikey=${hubspotApiKey}`;
 
-    // call the insert html function to log the step1msg into the popup
+    // call the createElement function to log the step1msg into the popup
     const step1LogMsg = `✅ Commencing create hubspot contact for ${
         values.firstName
     }`;

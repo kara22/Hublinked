@@ -143,7 +143,6 @@ function fetchData() {
         .click();
 
     let x = 0;
-
     let intervalID = setInterval(() => {
         let scrollSize = document.querySelector(".msg-s-message-list")
             .scrollHeight;

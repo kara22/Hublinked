@@ -49,7 +49,7 @@ const addNote = (values, contactId, messages, array = []) => {
 
                             // create a new tab who open hubspot contact page
                             chrome.tabs.create({
-                                url: `https://app.hubspot.com/contacts/3370273/contact/${contactId}/`,
+                                url: `https://app.hubspot.com/contacts/${hubspotAccountId}/contact/${contactId}/`,
                                 active: false
                             });
                             document.querySelector("#loader").style.display =
