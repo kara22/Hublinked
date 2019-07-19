@@ -1,8 +1,7 @@
 function fetchData() {
-    const fullName =
-        document.querySelector(
-            ".pv-top-card-section__name.inline.t-24.t-black.t-normal"
-        ).innerText || "not found";
+    const fullName = document.querySelector(
+        ".pv-top-card-v3--list.inline-flex.align-items-center li"
+    ).innerText;
     const firstName = fullName.split(" ")[0] || "not found";
     const lastName =
         fullName
@@ -12,19 +11,14 @@ function fetchData() {
             .trim() || "not found";
 
     const linkedinUrl = window.location.href;
-    const companyName =
-        document.querySelector(
-            ".pv-top-card-v2-section__link.pv-top-card-v2-section__link-experience.mb1 span"
-        ).innerText || "not found";
-    const jobTitle =
-        document.querySelector(
-            ".pv-top-card-section__headline.mt1.t-18.t-black.t-normal"
-        ).innerText || "not found";
+    const companyName = document.querySelector(
+        ".pv-top-card-v3--experience-list-item"
+    ).innerText;
+    const jobTitle = document.querySelector(".flex-1.mr5 h2").innerText;
 
-    const location =
-        document.querySelector(
-            ".pv-top-card-section__location.t-16.t-black--light.t-normal.mt1.inline-block"
-        ).innerText || "not found";
+    const location = document.querySelector(
+        ".pv-top-card-v3--list.pv-top-card-v3--list-bullet li"
+    ).innerText;
 
     setTimeout(() => {
         (async () => {
@@ -137,9 +131,7 @@ function fetchData() {
 
     //  open the current message box
     document
-        .querySelector(
-            "section.pv-profile-section div.pv-top-card-v2-section__info div.pv-top-card-v2-section__actions button"
-        )
+        .querySelector(".pv-s-profile-actions.pv-s-profile-actions--message")
         .click();
 
     let x = 0;

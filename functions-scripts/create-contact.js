@@ -1,4 +1,5 @@
 // FUNCTION TO CREATE HUBSPOT CONTACT TROUGH API
+
 const createContact = async values => {
     const hubspotCreateContactUrl = `https://api.hubapi.com/contacts/v1/contact/?hapikey=${hubspotApiKey}`;
 
@@ -52,6 +53,10 @@ const createContact = async values => {
                 {
                     property: "hubspot_owner_id",
                     value: values.hubspotOwner
+                },
+                {
+                    property: "demand_tracking_linkedin",
+                    value: "LinkedIn source"
                 }
             ]
         })
@@ -72,6 +77,7 @@ const createContact = async values => {
                 createElement("p", "logs", step2LogMsg);
 
                 const contactID = JsonResponse.identityProfile.vid;
+                demandTrackingLinkedin(contactID);
                 checkNotes(contactID, values);
             } else {
                 // call the insert html function to log the step2msg into the popup if the contact does not exists
